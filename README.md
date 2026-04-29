@@ -15,53 +15,6 @@ This project follows a clean architecture approach with a reusable API layer pow
 
 ---
 
-## Project Structure
-
-```
-lib/
-│
-├── api/
-│   ├── dio_client.dart       # Dio configuration (timeouts, headers, interceptors)
-│   ├── api_endpoints.dart    # API base URL & endpoints (ADD YOUR API KEY HERE)
-│   ├── api_logger.dart       # Request/Response logging
-│
-├── models/                   # Data models
-├── services/                 # API service layer
-├── screens/                  # UI screens
-├── widgets/                  # Reusable widgets
-└── main.dart                 # Entry point
-```
-
----
-
-## API Key Setup (IMPORTANT)
-
-This project uses TMDB API.
-
-* You must add your own API key before running the project.
-
-### Steps:
-
-* Create an account on TMDB
-* Generate your API key
-* Open the file:
-
-```
-lib/api/api_endpoints.dart
-```
-
-* Add your API key:
-
-```dart
-class ApiEndpoints {
-  static const String baseUrl = "https://api.themoviedb.org/3";
-
-  static const String apiKey = "YOUR_API_KEY_HERE";
-}
-```
-
----
-
 ## Getting Started
 
 ### 1. Clone the repository
@@ -80,6 +33,33 @@ flutter pub get
 
 ```
 flutter run
+```
+---
+
+## API Key Setup (IMPORTANT)
+
+This project uses TMDB API.
+
+* You must add your own API key before running the project.
+
+### Steps:
+
+* Create an account on TMDB
+* Generate your API key
+* Open the file:
+
+```
+lib/core/network/api_endpoints.dart
+```
+
+* Add your API key:
+
+```dart
+class ApiEndpoints {
+  static const String baseUrl = 'https://api.themoviedb.org/3';
+
+  static const String apiKey = 'YOUR_API_KEY_HERE';
+}
 ```
 
 ---
